@@ -1,0 +1,348 @@
+/****************************************
+GRID
+****************************************/
+.row { width: 96%; max-width: 98%; min-width: 700px; margin: 0 auto; }
+.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
+
+.column, .columns { float: left; min-height: 1px; padding: 0 15px; position: relative; }
+.column.centered, .columns.centered { float: none; margin: 0 auto; }
+[class*="column"] + [class*="column"]:last-child { float: right; }
+[class*="column"] + [class*="column"].end { float: left; }
+
+.one, .row .one { width: 8.33333%; }
+.two, .row .two { width: 16.66667%; }
+.three, .row .three { width: 25%; }
+.four, .row .four { width: 33.33333%; }
+.five, .row .five { width: 41.66667%; }
+.six, .row .six { width: 50%; }
+.seven, .row .seven { width: 58.33333%; }
+.eight, .row .eight { width: 66.66667%; }
+.nine, .row .nine { width: 75%; }
+.ten, .row .ten { width: 83.33333%; }
+.eleven, .row .eleven { width: 91.66667%; }
+.twelve, .row .twelve { width: 100%; }
+
+/* Nicolas Gallagher's micro clearfix */
+.row { *zoom: 1; }
+.row:before, .row:after { content: " "; display: table; }
+.row:after { clear: both; }
+
+
+
+
+
+/****************************************
+LAYOUT FOUNDATIONS
+****************************************/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin:0;
+    padding:0;
+    direction:ltr;
+}
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,ul,ol,
+.post-date, .message, .page-title {
+    margin-bottom:24px;
+}
+#container {
+    padding-bottom:3em;
+}
+.hidden {
+    display:none;
+}
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+
+
+
+
+/****************************************
+TYPE
+****************************************/
+body {
+	font:normal 400 62.5%/1.5 'Open Sans', Helvetica, Arial, sans-serif;
+	/* 16px with a line height of 24px */
+}
+body {
+    background:#f4f4f4;
+    color:#383838;
+}
+#container {
+    font-size:1.6em;
+}
+input {
+    font-family:'Open Sans', Helvetica, Arial, sans-serif;
+}
+textarea {
+    font-size:13px;
+}
+input,
+textarea {
+    border:0;
+}
+.post-md input,
+.post-md textarea {
+    font-family:'Droid Sans Mono', Courier, Consolas;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family:inherit;
+    font-weight:700;
+}
+a:link,
+a:visited {
+	color:#0090cf;
+        text-decoration:none;
+}
+a:hover {
+	color:#21687E;
+}
+.text-left {
+    text-align:left;
+}
+.text-right {
+    text-align:right;
+}
+.md-heading,
+.html-heading,
+.post-actions,
+.edit-actions,
+.list-heading {
+    color:#aaa;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+
+
+
+
+/****************************************
+HEADER / TOOLBAR
+****************************************/
+.toolbar {
+    margin-bottom:2em;
+    background:#179AD3;
+    color:#f4f4f4;
+}
+.toolbar h1 {
+    margin:0;
+    font-size:1.4em;
+    line-height:54px;
+}
+.header-menu {
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-left:1px solid #2F8BB3;
+}
+.header-menu li {
+    float:left;
+    line-height:12px;
+    padding:0;
+    border-right:1px solid #2F8BB3;
+}
+.header-menu a,
+.logout a {
+    display:block;
+    padding:1em;
+    color:#fff;
+    border-top:5px solid #179AD3;
+    border-bottom:5px solid #179AD3;
+}
+.header-menu a:hover,
+.logout a:hover {
+    color:#383838;
+}
+.header-menu a.selected {
+    border-bottom:5px solid #117AA8;
+}
+.logout a {
+    line-height:12px;
+    border-right:1px solid #2F8BB3;
+    border-left:1px solid #2F8BB3;
+}
+
+
+
+
+
+/****************************************
+MAIN
+****************************************/
+.page-title {
+    font-size:20px;
+    font-weight:700;
+    text-align:center;
+}
+
+.post-list,
+.post-content,
+.post-md {
+    background:#fff;
+    border-radius:2px;
+    box-shadow:0 1px 3px #ccc;
+}
+
+/* Post/Page List */
+.post-list .post {
+    border-top:1px solid #eee;
+}
+.post-list .post:hover {
+    background:#fbfbfb;
+}
+.list-heading,
+.post-list a.post-link,
+.md-heading {
+    display:block;
+    padding:1em 2em;
+}
+.post-list a .post-date {
+    margin:0;
+    color:#383838;
+}
+.page-list-title {
+    margin:0;
+}
+.status-draft {
+    color:#ed921c;
+}
+.status-live {
+    color:#a0ca37;
+}
+.status-draft,
+.status-live {
+    text-align:right;
+}
+.post-date,
+.status-draft,
+.status-live {
+    font-weight:400;
+}
+
+/* Post Content */
+.post-actions,
+.edit-actions,
+.post-content article,
+.post-md article {
+    padding:1em 2em;
+    clear:both;
+}
+.md-heading,
+.post-actions,
+.edit-actions {
+    border-bottom:1px solid #eee;
+}
+.post-actions {
+    overflow:hidden;
+}
+.post-actions a {
+    color:#ddd;
+}
+.post-actions a:hover {
+    color:#888;
+}
+.post-actions .edit {
+    float:left;
+}
+.post-actions .delete {
+    float:right;
+}
+.post-date {
+    display:block;
+}
+
+/* Edit Page */
+.post-md .edit-title {
+    font-weight:700;
+}
+.post-md .edit-title,
+.post-md textarea {
+    width:100%;
+}
+.post-md input:focus,
+.post-md textarea:focus {
+    outline:none;
+}
+.html-heading {
+    float:left;
+}
+.buttons {
+    float:right;
+}
+.message {
+    color:#5DA423;
+    font-size:20px;
+    font-weight:700;
+    text-align:center;
+}
+.message.error {
+    color:#D00;
+}
+
+
+
+
+
+/****************************************
+FORM
+****************************************/
+fieldset {
+    border:0;
+}
+select {
+    height:26px;
+}
+.status-select,
+.edit-actions .edit-date {
+    margin-right:1em;
+}
+.edit-actions .edit-date {
+    width:100px;
+    padding:0 5px;
+}
+.edit-slug {
+    width:180px;
+}
+.button {
+    padding:2px 10px;
+    background:#5DA423;
+    border:0;
+    border-radius:2px;
+    color:#fff;
+    font-weight:bold;
+}
+.button:hover {
+    background:#5B9729;
+}
+
+/* Login */
+.login fieldset {
+    padding:2em 0;
+}
+.login .field {
+    margin:1em 0 0;
+}
+.login input[type=text],
+.login input[type=password],
+.login input[type=submit] {
+    width:60%;
+    display:block;
+    margin:0 auto;
+    padding:0.5em 1em;
+    background:white;
+    border:1px solid #EEE;
+    border-radius:3px;
+    text-align:center;
+}
+.login input[type=submit] {
+    margin-bottom:1em;
+    background:#f3f3f3;
+    color:#555;
+}
+.login input[type=submit]:hover {
+    background:#eee;
+}
